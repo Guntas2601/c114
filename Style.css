@@ -1,5 +1,6 @@
 body{
     background-size:cover
+    
 }
 .btn-success:hover{
 
@@ -17,5 +18,6 @@ body{
         
         from{box-shadow: 1px 1px 38px  rgb(4, 255, 255);}
         to{box-shadow: 1px 1px 38px  rgb(255, 188, 4);}
+
         
         }
