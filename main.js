@@ -1,5 +1,7 @@
 
-function Preload(){}
+function preload(){
+    img1=loadImage("https://i.postimg.cc/hPF8pG2m/png-transparent-moustache-mustache-hair-beard-mustache-png-thumbnail-removebg-preview.png")
+}
 function setup(){
 canvas=createCanvas(300,300);
 canvas.center();
@@ -15,8 +17,10 @@ function gotPoses(results){
     if(results.length > 0)
     {
         console.log(results);
-        console.log("nose x = " + results[0].pose.nose.x)
-        console.log("nose y = " + results[0].pose.nose.y)
+        nosex=results[0].pose.nose.x-40;
+        nosey=results[0].pose.nose.y-5;
+        console.log("nose x = " + nosex);
+        console.log("nose y = " + nosey);
     }
 }
 
@@ -26,6 +30,7 @@ function modelLoaded(){
 
 function draw(){
     image(video,0,0,300,300);
+image(img1,nosex,nosey,80,60);
 }
 
 
@@ -34,3 +39,5 @@ function takesnapshot(){
     save("myimg.png")
     
     }
+nosex=0
+nosey=0
